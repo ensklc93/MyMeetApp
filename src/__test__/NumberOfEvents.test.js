@@ -30,9 +30,7 @@ describe("<NumberOfEvents /> component", () => {
     await waitFor(() => {
       expect(input).toHaveValue('10');
     });
-
-    console.log(input);
-
+    
     await waitFor(() => {
       const displayedEvents = screen.queryAllByRole('listitem');
       expect(displayedEvents).toHaveLength(10);
