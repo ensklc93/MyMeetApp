@@ -11,7 +11,7 @@ const Event = ({event}) => {
   return (
     <ul id="event">
       <li className="event-list-item">
-      <h2 onClick={handleClick}>{event.summary}</h2>
+      <h2 onClick={handleClick}>{event?.summary}</h2>
       {showDetails && (
         <div className="event-details">
           <p>{event.description}</p>
