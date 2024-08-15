@@ -9,7 +9,7 @@ const NumberOfEvents = ({ events }) => {
     setEventCount(value)
 };
 
-   const filteredEvents = events.slice(0, Math.min(eventCount, events.length));
+  const filteredEvents = events && events.length ? events.slice(0, Math.min(eventCount, events.length)) : [];
 
   return (
     <div id="numberOfEvents">
