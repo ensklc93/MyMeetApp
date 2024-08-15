@@ -1,33 +1,26 @@
-import { useState } from "react"
+import { useState } from "react";
 
+const NumberOfEvents = ({ }) => {
 
-const NumberOfEvents = ({ events }) => {
-  const [eventCount, setEventCount] = useState(32); // default to 32 events
+  const [number, setNumber] = useState(32);
 
-  const handleInputChange = (e) => {
-    const value = e.target.value;
-    setEventCount(value)
-};
-
-  const filteredEvents = events && events.length ? events.slice(0, Math.min(eventCount, events.length)) : [];
+  const handleInputChanged = (event) => {
+    const value = event.target.value;
+    setNumber(value);
+  }
 
   return (
-    <div id="numberOfEvents">
+    <div id="number-of-events">
+      <label htmlFor="number-of-events-input">Number of Events: </label>
       <input
-      type="text"
-      className="event-numbers"
-      placeholder="events"
-      value={eventCount}
-      onChange={handleInputChange}
-      aria-label="Number of events to display"
+        type="text"
+        id="number-of-events-input"
+        className="number-of-events-input"
+        value={number}
+        onChange={handleInputChanged}
       />
-      <ul>
-        {filteredEvents.map((event, index) => (
-          <li key={index}>{event.summary}</li>
-        ))}
-      </ul>
     </div>
-  )
+  );
 }
 
 export default NumberOfEvents;
