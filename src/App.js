@@ -28,11 +28,7 @@ const App = () => {
 
   useEffect(() => {
     fetchData()
-  }, [currentCity])
-
-  useEffect(() => {
-    fetchData()
-  }, [currentNOE])
+  }, [currentCity, currentNOE]);
 
   return (
     <div className="App">
