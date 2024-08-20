@@ -9,7 +9,7 @@ describe('show/hide an event details', () => {
         {
             headless: false,
             slowMo: 250, // slow down by 250ms,
-            timeout: 0 // removes any puppeteer/browser timeout limitations (this isn't the same as the timeout of jest)
+            timeout: 0 // 
           } */);
     page = await browser.newPage();
     await page.goto('http://localhost:3000/');
@@ -49,7 +49,7 @@ describe('filter events by city', () => {
         {
             headless: false,
             slowMo: 250, // slow down by 250ms,
-            timeout: 0 // removes any puppeteer/browser timeout limitations (this isn't the same as the timeout of jest)
+            timeout: 0 //
           } );*/ )
     page = await browser.newPage();
     await page.goto('http://localhost:3000/');
@@ -79,7 +79,7 @@ describe('filter events by city', () => {
     await page.click('.suggestions li:nth-child(1)'); // Select the first suggestion (Berlin, Germany)
   
     const eventItems = await page.$$('.event');
-    
+
     eventItems.forEach(async (item) => {
       const location = await item.$eval('p:nth-of-type(2)', el => el.textContent);
       expect(location).toContain('Berlin, Germany'); // Ensures events are from Berlin
