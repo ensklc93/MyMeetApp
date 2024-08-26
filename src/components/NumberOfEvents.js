@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const NumberOfEvents = ({setCurrentNOE}) => {
+const NumberOfEvents = ({setCurrentNOE, setErrorAlert}) => {
 
   const [number, setNumber] = useState(32);
 
@@ -8,6 +8,14 @@ const NumberOfEvents = ({setCurrentNOE}) => {
     const value = event.target.value;
     setNumber(value);
     setCurrentNOE(value)
+
+    let errorText;
+    if (value <= 0 || isNaN(value)) {
+      errorText = "Please type only numbers above 0."
+    } else {
+      errorText = ""
+    }
+    setErrorAlert(errorText);
   }
 
   return (
