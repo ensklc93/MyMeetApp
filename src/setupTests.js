@@ -1,5 +1,4 @@
-// https://github.com/testing-library/jest-dom
-
+const { ResizeObserver } = window;
 import '@testing-library/jest-dom';
 
 const MESSAGES_TO_IGNORE = [
@@ -16,3 +15,19 @@ if (!ignoreMessage) originalError(...args);
 }
 
 jest.setTimeout(30000);
+
+beforeEach(() => {
+    //@ts-ignore
+    delete window.ResizeObserver;
+    window.ResizeObserver = jest.fn().mockImplementation(() => ({
+      observe: jest.fn(),
+      unobserve: jest.fn(),
+      disconnect: jest.fn(),
+    }));
+  });
+  
+  afterEach(() => {
+    window.ResizeObserver = ResizeObserver;
+    jest.restoreAllMocks();
+  });
+  
