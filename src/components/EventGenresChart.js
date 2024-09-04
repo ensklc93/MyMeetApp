@@ -21,7 +21,7 @@ const EventGenresChart = ({ events }) => {
     return data;
   }
 
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+  const COLORS = ['#F47A1F', '#FDBB2F', '#377B2B', '#7AC142', '#007CC3'];
 
   const renderCustomizedLabel = ({ cx, cy, midAngle, outerRadius, percent, index }) => {
     const RADIAN = Math.PI / 180;
