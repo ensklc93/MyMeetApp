@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const EventGenresChart = ({ events }) => {
 
@@ -8,7 +8,7 @@ const EventGenresChart = ({ events }) => {
 
   useEffect(() => {
     setData(getData());
-  }, [`${events}`]);
+  }, [events]);
 
   const getData = () => {
     const data = genres.map(genre => {
