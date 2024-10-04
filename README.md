@@ -1,116 +1,59 @@
 # The MyMeetApp Project
-This project was created to learn "Testing in the Development Process" and to showcase my newly learned skills. 
+MyMeetApp is a web application designed to help users manage and view events. It integrates with Google Calendar to fetch and display events, allowing users to filter events by city and view event details.
 
 ## Objective
 The aim of this project is to build a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique.  
 
-## Project Dependencies
-Programming language is JavaScript.  
-The framework used is React.  
-TDD technique is used for testing.  
-The application also uses Google Calendar API and OAuth2 authentication flow.  
+## Installation Instructions
 
-### Feature: Filter Events by City
-#### User Story:
-As a user,  
-I should be able to filter events by city  
-So that I can see a list of events taking place in that city.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/MyMeetApp.git
+   cd MyMeetApp
+   ```
 
-#### Scenario 1
-- Given user hasn’t searched for any city;
-- When the user opens the app;
-- Then the user should see a list of upcoming events.
+2. **Install Dependencies:**
+    ```bash
+    npm install
+    ```
 
-#### Scenario 2
-- Given the main page is open;
-- When user starts typing in the city textbox;
-- Then the user should receive a list of cities (suggestions) that match what they’ve typed.
+3. **Set Up Environment Variables:**
+    - Create a **config.json** file in the **auth-server** directory with your Google API credentials.
 
-#### Scenario 3
-- Given user was typing “Berlin” in the city textbox AND the list of suggested cities is showing;
-- When the user selects a city (e.g., “Berlin, Germany”) from the list;
-- Then their city should be changed to that city (i.e., “Berlin, Germany”) AND the user should receive a list of upcoming events in that city.
+4. **Start the Development Server:**
+    ```bash
+    npm start
+    ```
 
-### Feature: Show/Hide Event Details
-#### User Story:
-As a user,  
-I should be able to click on a specific event detail,   
-so I can see more or less details on a specific event by clicking.  
+## Usage
+Once the project is set up, you can use MyMeetApp to:
 
-#### Scenario 1
-- Given the user is on the events page
-- When the events are displayed
-- Then the event details should be collapsed by default
+- View a list of upcoming events.
+- Search for events in specific cities.
+- View detailed information about each event.
+- Visualize event genres and city-specific events through charts.
+- Use the app offline with cached data.
 
-#### Scenario 2
- - Given the user is on the events page
- - When the user clicks on an event
- - Then the event details should be expanded 
+## Technologies Used
 
-#### Scenario 3
- 
- - Given the event details are expanded
- - When the user clicks on the event again
- - Then the event details should be collapsed 
+- **React:** Frontend library for building the user interface.
+- **Bootstrap:** CSS framework for responsive design.
+- **Node.js:** Backend runtime for server-side logic.
+- **AWS Lambda:** Serverless functions for handling API requests.
+- **Google Calendar API:** Fetches event data.
+- **Recharts:** Library for creating charts.
+- **Jest:** Testing framework for unit and integration tests.
+- **Puppeteer:** End-to-end testing.
 
-### Feature: Specify Number of Events
-#### User Story:
-As a user,  
-I should be able to decide how many events are displayed,  
-so I can have a better overview of the events without much distractions.
+## Features
 
-#### Scenario 1
--  Given the user is on the events page
--  And the user has not specified the number of events to display
--  Then 32 events should be displayed by default 
+- **Event List:** Displays a list of upcoming events.
+- **City Search:** Allows users to search for events in specific cities.
+- **Event Details:** Users can view more details about each event.
+- **Event Genres Chart:** Visual representation of event genres.
+- **City Events Chart:** Visual representation of events per city.
+- **Offline Support:** The app can function offline using cached data.
 
-#### Scenario 2
-- Given the user is on the events page
-- When the user specifies the number of events to display as 10
-- Then 10 events should be displayed
+## License
 
-### Feature: Use the App When Offline
-#### User Story:
-As a user,  
-I should be able to use the app offline,  
-so that I can use it independently of an internet connection. 
-
-#### Scenario 1
-- Given the user is offline
-- When the user opens the app
-- Then the app should show cached data 
-
-#### Scenario 2
-- Given the user is offline
-- When the user tries to change the search settings
-- Then the app should show an error message 
-
-### Feature: Add an App Shortcut to the Home Screen
-#### User Story:
-As a user,   
-I should be able to add the app shortcut to the home screen of the device I use,   
-so that I can be able to interact/use with the app easier and faster.
-
-#### Scenario
-- Given the user is on the app installation page
-- When the user chooses to add the app to the home screen
-- Then the app should be added as a shortcut on the device home screen 
-
-### Feature: Display Charts Visualizing Event Details
-#### User Story:
-As a user,   
-I should be able to see the charts of upcoming events in each city,   
-so that I have a visual feedback and understanding of the upcoming events in each city.
-
-#### Scenario
-- Given the user is on the events page
-- When the user views the event statistics
-- Then the app should display a chart with the number of upcoming events in each city
-
-
-    
-
-
-
-
-
+This project is licensed under the ISC License.
