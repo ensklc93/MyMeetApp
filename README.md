@@ -2,7 +2,7 @@
 MyMeetApp is a web application designed to help users manage and view events. It integrates with Google Calendar to fetch and display events, allowing users to filter events by city and view event details.
 
 ## Objective
-The aim of this project is to build a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique.  
+The aim of this project was to build a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique.  
 
 ## Features
 
