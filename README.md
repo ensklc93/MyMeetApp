@@ -4,6 +4,15 @@ MyMeetApp is a web application designed to help users manage and view events. It
 ## Objective
 The aim of this project is to build a serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique.  
 
+## Features
+
+- **Event List:** Displays a list of upcoming events.
+- **City Search:** Allows users to search for events in specific cities.
+- **Event Details:** Users can view more details about each event.
+- **Event Genres Chart:** Visual representation of event genres.
+- **City Events Chart:** Visual representation of events per city.
+- **Offline Support:** The app can function offline using cached data.
+
 ## Installation Instructions
 
 1. **Clone the Repository:**
@@ -45,14 +54,7 @@ Once the project is set up, you can use MyMeetApp to:
 - **Jest:** Testing framework for unit and integration tests.
 - **Puppeteer:** End-to-end testing.
 
-## Features
 
-- **Event List:** Displays a list of upcoming events.
-- **City Search:** Allows users to search for events in specific cities.
-- **Event Details:** Users can view more details about each event.
-- **Event Genres Chart:** Visual representation of event genres.
-- **City Events Chart:** Visual representation of events per city.
-- **Offline Support:** The app can function offline using cached data.
 
 ## License
 
